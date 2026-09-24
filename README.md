@@ -29,6 +29,36 @@ Time-dependent packets are constructed from the stationary scattering states. Ch
 
 Animated versions of these calculations, together with narrow packets centred on both resonances, are available in the [`part4_wavepacket_scattering`](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part4_wavepacket_scattering) directory.
 
+### Scattering animations
+
+The animations make the difference between the three energy regimes easier to see than a single snapshot.
+
+| Low-transmission packet | Mixed-transmission packet | High-energy packet |
+| --- | --- | --- |
+| ![Blocked packet animation](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part4_wavepacket_scattering/blocked.gif) | ![Partially blocked packet animation](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part4_wavepacket_scattering/partially_blocked.gif) | ![Passing packet animation](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part4_wavepacket_scattering/pass.gif) |
+
+- **Blocked:** the packet reaches the barrier and returns to the incident side. Only a small transient amplitude enters the central region.
+- **Partially blocked:** the initial momentum distribution covers both high- and low-transmission components. The packet therefore separates into visible reflected and transmitted pieces.
+- **Pass:** the energy range lies in a region where the transmission is already close to one, so the reflected component is very small.
+
+### Packets centred on the resonances
+
+The first resonance is so narrow that the momentum distribution must also be very narrow. By the uncertainty relation, this produces a packet that is broad in position space. The second resonance has a larger width and can support a more localized incident packet.
+
+| First resonance | Second resonance |
+| --- | --- |
+| ![Wave packet at the first resonance](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part4_wavepacket_scattering/first_resonance_zoom.gif) | ![Wave packet at the second resonance](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part4_wavepacket_scattering/second_resonance_zoom.gif) |
+
+In both cases, most spectral components lie inside a transmission peak and pass through the double barrier. The contrast in spatial width reflects the large difference between the two resonance widths.
+
+## Free propagation
+
+Before introducing the potential, the code checks the motion of a free Gaussian packet. Its centre moves at the group velocity set by the mean momentum, while the packet spreads because different momentum components acquire different phases.
+
+![Free Gaussian wave-packet propagation](Yifeng%20CHEN%20999016959/Codes%20and%20Figures/output/part1_free_gaussian/free_propagation.gif)
+
+This provides a useful reference for the later scattering animations: translation and ordinary dispersion are already present without a potential, whereas splitting and strong reflection are produced by the double barrier.
+
 ## Numerical approach
 
 The project is organized into six calculations.
